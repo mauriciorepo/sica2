@@ -1,0 +1,226 @@
+.custom-first-last .x-grid-row-over .x-grid-cell { 
+    background-color: #EEEED1; 
+    border-bottom-color: #999; 
+    border-bottom-style: dashed; 
+    border-top-color: #999; 
+    border-top-style: dashed; 
+} 
+.custom-first-last .x-grid-row-selected .x-grid-cell-first { 
+    background-image: url(img/bullet_go.png)!important; 
+    background-repeat: no-repeat;
+     background-color: #E0FFFF !important; 
+    padding-left: 12px; 
+} 
+ 
+.custom-first-last .x-grid-row-selected .x-grid-cell-last { 
+    background-image: url(img/user_green.png) !important; 
+    background-position: right; 
+    background-color: #E0FFFF !important; 
+      border-bottom-color: #999; 
+    border-bottom-style: solid; 
+    border-top-color: #999; 
+    border-top-style: solid; 
+    background-repeat: no-repeat; 
+}.dia-row .x-grid-cell { 
+    background-color: #AEEEEE ; 
+    color: #104E8B; 
+} 
+
+.vencido-row .x-grid-cell { 
+    background-color: #EED5D2 ; 
+    color: #900; 
+} 
+ 
+.ok-row .x-grid-cell { 
+    background-color: #C1FFC1 ; 
+    color: #090; 
+}
+.x-mask.splashscreen {
+background-color: white;
+opacity: 1;
+}
+.x-mask-msg.splashscreen,
+.x-mask-msg.splashscreen div {
+font-size: 16px;
+font-weight: bold;
+padding:195px 114px 195px 95px;
+border: none;
+background-color: transparent;
+background-position: top center;
+}
+.x-message-box .x-window-body .x-box-inner {
+min-height: 400px !important;
+}
+.x-splash-icon {
+background-image: url('img/CASMAN.png') !important;
+margin-top: -30px;
+margin-bottom: -220px;
+height: 1px;
+}
+.key {
+background-image:url('img/door_in.png') !important;
+}
+.menuvenda {
+background-image:url('img/money_add.png') !important;
+}
+.pesquisa {
+background-image:url('img/magnifier.png') !important;
+}
+.addcontatofornecedor {
+background-image:url('img/add.png') !important;
+}
+.addcontasapagar {
+background-image:url('img/money_delete.png') !important;
+}
+.editcontasapagar {
+background-image:url('img/report_edit.png') !important;
+}
+.tabelapreco {
+background-image:url('img/money_dollar.png') !important;
+}
+.extract {
+background-image:url('img/extract.gif') !important;
+}
+.fornecedor{
+background-image:url('img/folder-sent.png') !important;
+}
+.save {
+background-image:url('img/accept.png') !important;
+}
+.liberar {
+background-image:url('img/down.png') !important;
+}
+.editarusuario {
+background-image:url('img/user_edit.png') !important;
+}
+.encerrar{
+background-image:url('img/edit.png') !important;
+}
+.cancel {
+background-image:url('img/cancel.png') !important;
+}
+.editarfilial {
+background-image:url('img/application_form_edit.png') !important;
+}
+.logar {
+background-image:url('img/folder_user.png') !important;
+}
+.logout{
+background-image:url('img/door_in.png') !important;
+	
+}
+.entrada{
+background-image:url('img/folder_user.png') !important;
+	
+}
+.movimento{
+background-image:url('img/application_view_list.png') !important;
+	
+}
+.pesquisa{
+background-image:url('img/filefind.png') !important;
+	
+}
+.criancaverde{
+background-image:url('img/user_green.png') !important;
+	
+}
+.administrator{
+background-image:url('img/chmod.png') !important;
+	
+}
+.financeiro{
+background-image:url('img/spread.gif') !important;
+	
+}
+.contapagar{
+background-image:url('img/application_form_add.png') !important;
+	
+}
+.contareceber{
+background-image:url('img/application_form_delete.png') !important;
+	
+}
+
+#titleHeader,titleClock {
+
+color:white;
+
+font-size:30px;
+font-weight:bold;
+font-family: helvetica,arial,verdana,sans-serif;
+text-shadow: 0 1px 0 #4E691F;
+
+}
+#titleClock {
+
+color:white;
+
+font-size:30px;
+font-weight:bold;
+font-family: helvetica,arial,verdana,sans-serif;
+text-shadow: 0 1px 0 #4E691F;
+
+}
+
+.home{
+background-image:url('img/home.png') !important;
+}
+.xml{
+background-image:url('img/documents.png') !important;
+}
+.menumovimento{
+background-image:url('img/application.png') !important;
+}
+.panelmovimento{
+background-image:url('img/report_edit.png') !important;
+}
+.paneldadosgerais{
+background-image:url('img/application_view_tile.png') !important;
+}
+.menuvenda{
+background-image:url('img/money.png') !important;
+}
+.menucadastro{
+background-image:url('img/page_user.gif') !important;
+}
+.cadastrofiliais{
+background-image:url('img/tabs.gif') !important;
+}
+.menuentrada{
+background-image:url('img/page_attach.png') !important;
+}
+
+.produto{
+background-image:url('img/cart_put.png') !important;
+}
+.sitemap{
+background-image:url('img/sitemap_color.png') !important;
+}
+.your-css{
+background-image:url('img/Grade-Azul_107663p.jpg') !important;
+}
+/* this is a hack! */
+.msg_floating {
+    position: absolute !important;
+    z-index: 1000000 !important;
+}
+.logo{
+background-image:url('img/logo.png') no-repeat !important;
+}
+.combo-result-item{
+    padding:2px;
+    border: 1px solid #FFFFFF;
+    background-color: #F0F8FF !important;
+}
+.combo-name{
+  font-size:13px;
+  font-weight:bold;
+  background-color:#B0C4DE !important;
+}
+.combo-full-address{
+   font-size:11px;
+   font-weight:bold;
+   color:#666666;
+   background-color: #F0F8FF !important;
+}

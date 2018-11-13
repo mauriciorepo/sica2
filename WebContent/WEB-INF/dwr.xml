@@ -1,0 +1,79 @@
+ <!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+
+
+<dwr>
+  <allow>
+  <filter class="org.directwebremoting.filter.AuditLogAjaxFilter"/>
+  
+   <convert match="java.lang.Exception" converter="exception">
+  
+  <param name='include' value='message,lineNumber'/>
+</convert>
+
+    <convert converter="bean" match="java.lang.Throwable"/>  	
+    <convert converter="bean" match="java.lang.StackTraceElement"/> 
+    
+    
+   <convert converter="collection" match="java.util.Collection"/>
+
+    <convert converter="map" match="java.util.Map"/>
+    <convert converter="bean" match="br.com.sica.gerais.Firma" javascript="Firma"/>
+    <convert converter="bean" match="br.com.sica.gerais.Filiais" javascript="Filiais"/>
+    <convert converter="bean" match="br.com.sica.financeiro.Banco" javascript="Banco"/>
+    <convert converter="bean" match="br.com.sica.financeiro.ContaBancaria" javascript="ContaBancaria"/>
+    <convert converter="bean" match="br.com.sica.financeiro.ContasAPagar" javascript="ContasAPagar"/>
+    <convert converter="bean" match="br.com.sica.financeiro.PlanodeContas" javascript="PlanodeContas"/>
+    <convert converter="bean" match="br.com.sica.financeiro.CentrodeResultados" javascript="CentrodeResultados"/>
+    <convert converter="bean" match="br.com.sica.financeiro.ParcelasAPagar" javascript="ParcelasAPagar"/>
+    <convert converter="bean" match="br.com.sica.financeiro.RateioPlanoCentroContasaPagar" javascript="RateioPlanoCentroContasaPagar"/>
+    <convert converter="bean" match="br.com.sica.financeiro.ContasAPagarGrid" javascript="ContasAPagarGrid"/>
+    <convert converter="bean" match="br.com.sica.financeiro.BaixaDespesas" javascript="BaixaDespesas"/>
+    <convert converter="bean" match="br.com.sica.suprimentos.Produto" javascript="Produto"/>
+    <convert converter="bean" match="br.com.sica.suprimentos.Grupo" javascript="Grupo"/>
+     <convert converter="bean" match="br.com.sica.suprimentos.Classe" javascript="Classe"/>
+   
+    <convert converter="bean" match="br.com.sica.suprimentos.Fornecedor" javascript="Fornecedor"/>
+    
+    <convert converter="bean" match="br.com.sica.security.Usuario" javascript="Usuario"/>
+    <convert converter="bean" match="br.com.sica.security.PerfilUsuario" javascript="PerfilUsuario"/>
+    <convert converter="bean" match="br.com.sica.security.Acessos" javascript="Acessos"/>
+   
+   <create creator="new" javascript="FacadeProduto" scope="session" >
+        <param name="class" value="br.com.sica.suprimentos.FacadeProduto" />
+    </create>
+    
+    <create creator="new" javascript="FacadeFirma" scope="session" >
+        <param name="class" value="br.com.sica.gerais.FacadeFirma" />
+    </create>
+    <create creator="new" javascript="FacadeFiliais" scope="session" >
+        <param name="class" value="br.com.sica.gerais.FacadeFiliais" />
+    </create>
+    <create creator="new" javascript="FacadeUsuario" scope="session">
+        <param name="class" value="br.com.sica.security.FacadeUsuario" />
+    </create>
+    <create creator="new" javascript="FacadeBanco" scope="session">
+        <param name="class" value="br.com.sica.financeiro.FacadeBanco" />
+    </create>
+    <create creator="new" javascript="FacadeContaBancaria" scope="session">
+        <param name="class" value="br.com.sica.financeiro.FacadeContaBancaria" />
+    </create>
+    <create creator="new" javascript="FacadePlanodeContas" scope="session">
+        <param name="class" value="br.com.sica.financeiro.FacadePlanodeContas" />
+    </create>
+    <create creator="new" javascript="FacadeCentrodeResultado" scope="session">
+        <param name="class" value="br.com.sica.financeiro.FacadeCentrodeResultado" />
+    </create>
+    <create creator="new" javascript="FacadeContasAPagar" scope="session">
+        <param name="class" value="br.com.sica.financeiro.FacadeContasAPagar" />
+    </create>
+    
+    
+    <create creator="new" javascript="FacadeFornecedor" scope="session">
+        <param name="class" value="br.com.sica.suprimentos.FacadeFornecedor" />
+    </create>
+     
+   
+     
+   
+  </allow>
+</dwr>

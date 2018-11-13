@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+	<!-- Configura o servidor SMTP de E-mail -->
+	<bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<!-- Substitua pelo nome do seu Host aqui -->
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<!-- Coloque o nome de usuário aqui -->
+		<property name="username" value="casman.info" />
+		<!-- Coloque a senha aqui -->
+		<property name="password" value="casman8155" />
+	    <property name="javaMailProperties">
+	       <props>
+       	      <prop key="mail.smtp.auth">true</prop>
+       	      <prop key="mail.smtp.starttls.enable">true</prop>
+       	   </props>
+	</property>
+	</bean>
+	<!-- max upload size in bytes -->
+ <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <property name="maxUploadSize" value="1000000"/>
+ </bean>
+	<!-- Cria uma parte da mensagem que será padrão -->
+	<bean id="defaultMessage" class="org.springframework.mail.SimpleMailMessage">
+	  <property name="to" value="orcamento.central@gmail.com"/>
+	  <property name="subject" value="Teste email de Orçamento"/>
+	</bean>
+	
+	<!-- Determina a classe que será injetada -->
+	<bean id="simpleMail" class="br.com.sica.email.EnviaEmailSimples" >
+	 	<property name="mailSender" ref="mailSender"/>
+	 	<property name="defaultMessage" ref="defaultMessage"/>
+	</bean>
+	
+	<!--  Determina a classe que será injetada -->
+	<bean id="htmlMail" class="br.com.sica.email.EnviaEmailHtml" >
+	 	<property name="mailSender" ref="mailSender"/>
+	</bean>	 
+	
+	 
+	<!-- Identifica os beans anotados com @Component  -->
+   <!--   <context:component-scan base-package="javamagazine.mail" annotation-config="true"/>
+	
+	
+   <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+      <property name="velocityProperties">
+         <value>
+            resource.loader=class
+            class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+         </value>
+      </property>
+   </bean>-->
+	
+</beans>
+ 
